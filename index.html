@@ -457,10 +457,11 @@
     <h2>Haftalık Finans Bülteni</h2>
     <p>Her Pazartesi: kur analizi, altın yorumu, fırsat alanları ve okuyucu portföy önerileri doğrudan e-postana.</p>
     <div class="cta-row">
-      <input type="email" class="cta-input" placeholder="e-posta adresin">
-      <button class="btn-green" onclick="showToast('Bültene başarıyla abone oldunuz! 📬')">Abone Ol</button>
+      <input type="email" class="cta-input" id="cta-email" placeholder="e-posta adresin">
+      <button class="btn-green" onclick="subscribe('cta-email','cta-msg')">Abone Ol</button>
     </div>
-    <div style="margin-top:1rem;font-size:0.75rem;color:var(--muted)">24.600+ okuyucu · Spam yok · Ücretsiz</div>
+    <div id="cta-msg" style="margin-top:0.6rem;font-size:0.85rem;min-height:1.1rem"></div>
+    <div style="margin-top:0.4rem;font-size:0.75rem;color:var(--muted)">24.600+ okuyucu · Spam yok · Ücretsiz</div>
   </div>
 </div>
 
@@ -637,6 +638,19 @@ function calcSavings() {
 function activateTab(btn) {
   document.querySelectorAll('.ctab').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
+}
+
+async function subscribe(inputId, msgId) {
+  const email = document.getElementById(inputId).value.trim();
+  const msgEl = document.getElementById(msgId);
+  if (!email) { msgEl.textContent = '❗ E-posta adresinizi girin.'; msgEl.style.color='#fca5a5'; return; }
+  msgEl.textContent = '⏳ Kaydediliyor...'; msgEl.style.color='var(--muted)';
+  try {
+    const res = await fetch('/api/subscribe', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({email}) });
+    const data = await res.json();
+    if (data.success) { msgEl.textContent = data.message; msgEl.style.color='#4ade80'; document.getElementById(inputId).value=''; }
+    else { msgEl.textContent = data.error || 'Bir hata oluştu.'; msgEl.style.color='#fca5a5'; }
+  } catch { msgEl.textContent = 'Bağlantı hatası, tekrar deneyin.'; msgEl.style.color='#fca5a5'; }
 }
 
 function showToast(msg) {
