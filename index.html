@@ -359,6 +359,80 @@
   <div class="strat-grid" id="strat-grid"></div>
 </div>
 
+<!-- RİSK PROFİLİ TESTİ -->
+<div style="max-width:1200px;margin:5rem auto;padding:0 1.5rem" id="risk-testi">
+  <div style="background:linear-gradient(135deg,rgba(16,185,129,0.08),rgba(245,158,11,0.06));border:1px solid rgba(16,185,129,0.2);border-radius:20px;padding:2.5rem">
+    <div style="text-align:center;margin-bottom:2rem">
+      <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);color:var(--primary);padding:0.3rem 0.9rem;border-radius:20px;font-size:0.78rem;font-weight:700;margin-bottom:1rem">🎯 Risk Profili Testi</div>
+      <h2 style="font-size:1.8rem;font-weight:900;margin-bottom:0.6rem">Hangi Yatırımcı Tipindesin?</h2>
+      <p style="color:var(--muted)">5 soruda risk profilini belirle, sana özel portföy önerisi al</p>
+    </div>
+    <div id="risk-body">
+      <div style="max-width:640px;margin:0 auto">
+        <div id="risk-progress-bar-wrap" style="height:6px;background:var(--border);border-radius:3px;margin-bottom:1.5rem"><div id="risk-progress-bar" style="height:100%;background:var(--primary);border-radius:3px;width:0%;transition:width .4s"></div></div>
+        <div id="risk-question-area"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 100 TL İLE BAŞLA -->
+<div style="max-width:1200px;margin:5rem auto;padding:0 1.5rem" id="az-para">
+  <div style="margin-bottom:1.5rem">
+    <div style="font-size:0.72rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:0.6rem">Küçük Birikim</div>
+    <h2 style="font-size:1.8rem;font-weight:900;margin-bottom:0.4rem">💡 "Çok Az Param Var" Diyenlere</h2>
+    <p style="color:var(--muted)">100-500 TL ile enflasyona karşı durmanın 4 gerçekçi yolu</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem" id="small-invest-grid"></div>
+</div>
+
+<!-- DOLANDIRICILIK RADARI -->
+<div style="max-width:1200px;margin:5rem auto;padding:0 1.5rem" id="dolandiricilik">
+  <div style="background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:20px;padding:2.5rem">
+    <div style="margin-bottom:1.5rem">
+      <div style="font-size:0.72rem;font-weight:800;color:#ef4444;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:0.6rem">⚠️ Dolandırıcılık Radarı</div>
+      <h2 style="font-size:1.8rem;font-weight:900;margin-bottom:0.4rem">Bu Tuzaklara Düşme</h2>
+      <p style="color:var(--muted)">Türkiye'de en yaygın yatırım dolandırıcılıkları — gerçek örnekler</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem" id="fraud-grid"></div>
+    <div style="margin-top:1.5rem;padding:1rem;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:12px;font-size:0.85rem">
+      ✅ <strong style="color:var(--primary)">Altın Kural:</strong> "Garantili yüksek getiri" vaat eden hiçbir yatırım gerçek değildir. Bankacılık lisansı olmayan kişilerden yatırım teklifi almayın. SPK kayıtlı olup olmadığını <strong>spk.gov.tr</strong>'den kontrol edin.
+    </div>
+  </div>
+</div>
+
+<!-- KİRA vs ALMA HESAPLAYICI -->
+<div style="max-width:1200px;margin:5rem auto;padding:0 1.5rem" id="kira-alma">
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.5rem">
+    <div style="margin-bottom:1.5rem">
+      <div style="font-size:0.72rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:0.6rem">Hesaplama Aracı</div>
+      <h2 style="font-size:1.8rem;font-weight:900;margin-bottom:0.4rem">🏠 Ev Almak mı, Kira mı?</h2>
+      <p style="color:var(--muted)">Türkiye koşullarına göre gerçekçi karşılaştırma hesaplayıcısı</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+      <div>
+        <div style="font-weight:700;margin-bottom:1rem;color:var(--primary)">🏦 Ev Alma Senaryosu</div>
+        <div class="input-group"><label class="input-label">Ev fiyatı (₺)</label><input type="number" class="input-field" id="ka-fiyat" value="5000000"></div>
+        <div class="input-group"><label class="input-label">Peşinat (%)</label><input type="number" class="input-field" id="ka-pesinat" value="20"></div>
+        <div class="input-group"><label class="input-label">Kredi faiz oranı (yıllık %)</label><input type="number" class="input-field" id="ka-faiz" value="36"></div>
+        <div class="input-group"><label class="input-label">Kredi süresi (yıl)</label><input type="number" class="input-field" id="ka-sure" value="10"></div>
+      </div>
+      <div>
+        <div style="font-weight:700;margin-bottom:1rem;color:var(--gold)">🏠 Kirada Kalma Senaryosu</div>
+        <div class="input-group"><label class="input-label">Aylık kira (₺)</label><input type="number" class="input-field" id="ka-kira" value="15000"></div>
+        <div class="input-group"><label class="input-label">Yıllık kira artış oranı (%)</label><input type="number" class="input-field" id="ka-artis" value="25"></div>
+        <div class="input-group"><label class="input-label">Peşinatı yatırırsam yıllık getiri (%)</label><input type="number" class="input-field" id="ka-getiri" value="40"></div>
+        <div class="input-group"><label class="input-label">Analiz süresi (yıl)</label><input type="number" class="input-field" id="ka-yil" value="10"></div>
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcKiraAlma()">Karşılaştır</button>
+    <div id="ka-result" class="calc-result" style="display:none;margin-top:1.5rem">
+      <div class="calc-result-title" id="ka-verdict"></div>
+      <div id="ka-rows"></div>
+    </div>
+  </div>
+</div>
+
 <!-- BLOG -->
 <div class="blog-section" id="blog">
   <div class="section-label">Finans Rehberleri</div>
@@ -579,6 +653,131 @@ function animateCount(el, target, prefix='', suffix='') {
     el.textContent = prefix + cur.toLocaleString('tr-TR') + suffix;
     if(cur>=target) clearInterval(int);
   }, 20);
+}
+
+// ─── RİSK PROFİLİ TESTİ ──────────────────────────────────────────────────────
+const RISK_QS = [
+  {q:'Yatırımın %20 değer kaybetse ne yaparsın?',opts:['Hepsini hemen satarım, daha fazla kayıp istemem','Endişelenirim ama beklerim','Fırsatmış, daha fazla alırım']},
+  {q:'Yatırım hedefin nedir?',opts:['Paramın değerini korumak yeterli','Enflasyonun biraz üzerinde getiri','Uzun vadede çok daha fazlasını kazanmak']},
+  {q:'Paraya ne zaman ihtiyacın var?',opts:['1 yıl içinde kullanabilirim','2-5 yıl içinde lazım olur','5 yıl sonrası, bekleyebilirim']},
+  {q:'Yatırım deneyimin nedir?',opts:['Hiç yatırım yapmadım','Banka mevduatı/altın gibi basit araçlar denedim','Borsa, kripto gibi araçları denedim']},
+  {q:'Aylık birikim olarak ne kadar ayırabiliyorsun?',opts:['500 TL\'den az','500 - 3.000 TL arası','3.000 TL\'den fazla']},
+];
+const RISK_SCORES = [[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2]];
+const RISK_PROFILES = [
+  {min:0,max:3,label:'Muhafazakâr',emoji:'🛡️',color:'#10b981',portfolio:[{ad:'Gram Altın',oran:50,renk:'#f59e0b'},{ad:'TL Mevduat/TEFAS',oran:30,renk:'#3b82f6'},{ad:'Döviz (USD/EUR)',oran:20,renk:'#6366f1'}],desc:'Paranı korumak birincil önceliğin. Yüksek volatilite seni rahatsız eder. Altın ve mevduat ağırlıklı portföy sana uygun.'},
+  {min:4,max:6,label:'Dengeli',emoji:'⚖️',color:'#f59e0b',portfolio:[{ad:'Gram Altın',oran:35,renk:'#f59e0b'},{ad:'Döviz (USD/EUR)',oran:25,renk:'#3b82f6'},{ad:'Hisse/BIST ETF',oran:25,renk:'#6366f1'},{ad:'Kripto (%5-15)',oran:15,renk:'#a855f7'}],desc:'Hem koruma hem büyüme istiyorsun. Çeşitlendirilmiş portföy sana uygun. Kısa dönem dalgalanmalara katlanabilirsin.'},
+  {min:7,max:10,label:'Agresif',emoji:'🚀',color:'#a855f7',portfolio:[{ad:'Hisse/BIST ETF',oran:40,renk:'#6366f1'},{ad:'Kripto Sepeti',oran:30,renk:'#a855f7'},{ad:'Döviz',oran:20,renk:'#3b82f6'},{ad:'Altın',oran:10,renk:'#f59e0b'}],desc:'Uzun vadeli maksimum getiri arıyorsun. Kısa dönem büyük kayıplara hazırsın. Yüksek risk yüksek potansiyel.'},
+];
+let riskAnswers = [], riskQ = 0;
+function renderRiskQ() {
+  const q = RISK_QS[riskQ];
+  document.getElementById('risk-progress-bar').style.width = ((riskQ)/RISK_QS.length*100)+'%';
+  document.getElementById('risk-question-area').innerHTML = `
+    <div style="font-weight:700;font-size:1rem;margin-bottom:1.2rem;text-align:center">${riskQ+1}/${RISK_QS.length} — ${q.q}</div>
+    <div style="display:flex;flex-direction:column;gap:0.7rem">
+      ${q.opts.map((o,i)=>`
+        <div onclick="riskAnswer(${i})" style="padding:0.85rem 1.2rem;border-radius:10px;border:1px solid var(--border);cursor:pointer;font-size:0.9rem;font-weight:500;transition:all .2s" onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text)'">${['A','B','C'][i]}. ${o}</div>`).join('')}
+    </div>`;
+}
+function riskAnswer(idx) {
+  riskAnswers.push(RISK_SCORES[riskQ][idx]);
+  riskQ++;
+  if(riskQ >= RISK_QS.length) showRiskResult();
+  else renderRiskQ();
+}
+function showRiskResult() {
+  const score = riskAnswers.reduce((a,b)=>a+b,0);
+  const profile = RISK_PROFILES.find(p=>score>=p.min&&score<=p.max)||RISK_PROFILES[1];
+  document.getElementById('risk-progress-bar').style.width='100%';
+  document.getElementById('risk-question-area').innerHTML = `
+    <div style="text-align:center;margin-bottom:1.5rem">
+      <div style="font-size:3rem">${profile.emoji}</div>
+      <div style="font-size:1.4rem;font-weight:900;color:${profile.color};margin:0.5rem 0">${profile.label} Yatırımcı</div>
+      <div style="color:var(--muted);font-size:0.88rem;max-width:480px;margin:0 auto">${profile.desc}</div>
+    </div>
+    <div style="font-weight:700;margin-bottom:0.8rem;text-align:center">Önerilen Portföy Dağılımı</div>
+    <div style="max-width:480px;margin:0 auto">
+      ${profile.portfolio.map(p=>`
+        <div style="margin-bottom:0.8rem">
+          <div style="display:flex;justify-content:space-between;font-size:0.85rem;margin-bottom:0.3rem"><span style="font-weight:600">${p.ad}</span><span style="color:${p.renk};font-weight:700">%${p.oran}</span></div>
+          <div style="height:10px;background:var(--border);border-radius:5px;overflow:hidden"><div style="width:${p.oran}%;height:100%;background:${p.renk};border-radius:5px;transition:width 1s"></div></div>
+        </div>`).join('')}
+    </div>
+    <div style="text-align:center;margin-top:1.5rem"><button onclick="riskQ=0;riskAnswers=[];renderRiskQ()" style="padding:0.6rem 1.5rem;background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--muted);cursor:pointer">↺ Tekrar Dene</button></div>`;
+}
+renderRiskQ();
+
+// ─── 100 TL İLE BAŞLA ────────────────────────────────────────────────────────
+const SMALL_INVEST = [
+  {icon:'🪙', title:'Altın Gramı Al', min:'₺100+', desc:'Ziraat, Vakıfbank veya Halkbank uygulamalarından 0.01 gram altından başlayarak alım yapabilirsin. Düzenli alım yöntemini kullan.', link:'Nasıl yapılır →'},
+  {icon:'📈', title:'BIST ETF (Borsa Fonu)', min:'₺50+', desc:'XU100 endeks fonu al. Borsa İstanbul\'daki 100 büyük şirkete aynı anda yatırım yapıyorsun. Garanti veya Vakıfbank aracılık hizmetleri ile başlayabilirsin.', link:'Nasıl açılır →'},
+  {icon:'💵', title:'Dolar/Euro Alım', min:'₺380+', desc:'Bankacılık uygulamasından anında döviz alabilirsin. Kur farkı maliyetini düşürmek için düzenli küçük alımları tercih et.', link:'Hangi banka uygun →'},
+  {icon:'🏦', title:'BES\'e Katıl', min:'₺0 devlet katkısı', desc:'Bireysel Emeklilik Sistemi\'nde devlet, katkıların %25\'ini ekliyor. Asgari ücretle bile başlayabilirsin. En iyi "ücretsiz para" yöntemi.', link:'BES hesabı aç →'},
+];
+document.getElementById('small-invest-grid').innerHTML = SMALL_INVEST.map(s=>`
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem">
+    <div style="font-size:2rem;margin-bottom:0.6rem">${s.icon}</div>
+    <div style="font-weight:800;font-size:0.95rem;margin-bottom:0.2rem">${s.title}</div>
+    <div style="color:var(--primary);font-weight:700;font-size:0.82rem;margin-bottom:0.6rem">Başlangıç: ${s.min}</div>
+    <div style="color:var(--muted);font-size:0.82rem;line-height:1.55;margin-bottom:0.8rem">${s.desc}</div>
+    <div style="color:var(--primary);font-size:0.8rem;font-weight:600;cursor:pointer" onclick="showToast('Detaylı rehber yakında eklenecek!')">${s.link}</div>
+  </div>`).join('');
+
+// ─── DOLANDIRICILIK RADARI ────────────────────────────────────────────────────
+const FRAUDS = [
+  {emoji:'⚠️', title:'Forex / CFD Dolandırıcılığı', desc:'"Günde %5 kazan" vaat eden forex siteleri. Türkiye\'de lisanssız forex işlemi yasaktır. Yatırdığın parayı geri alamazsın. SPK listesini kontrol et.', kirmizi:'Lisanssız platform'},
+  {emoji:'🔺', title:'Ponzi / Piramit Sistemler', desc:'"Arkadaşını getir, faiz kazan" modeli. Yeni katılımcı yoksa sistem çöker. Türkiye\'de son 5 yılda 15.000+ kişi bu şekilde dolandırıldı.', kirmizi:'Vaat: Yüksek garanti faiz'},
+  {emoji:'🪙', title:'Sahte Kripto Projeleri', desc:'Tanınmayan token veya coin önerileri. "Presale fırsatı" ile para toplandıktan sonra proje kayboluyor (rug pull). Yalnızca borsada listelenen koinlere bak.', kirmizi:'Tanınmayan token'},
+  {emoji:'📱', title:'WhatsApp Yatırım Grupları', desc:'"VIP sinyal" veya "altın fırsatlar" paylaşan gruplar. Önce küçük kazançlar gösterilir, sonra büyük yatırım istenir ve iletişim kesilir.', kirmizi:'WhatsApp/Telegram sinyali'},
+  {emoji:'🏗️', title:'Arazi / Kriptopara Kombinasyonu', desc:'"Dubai/Bali\'de arsa al, kripto ile öde" modeli. Mülk kaydı yapılmaz, kripto geri alınamaz. Yurt dışı gayrimenkul alımında noter onaylı işlem şart.', kirmizi:'Yurt dışı + kripto ödeme'},
+  {emoji:'🤖', title:'AI Trading Botları', desc:'"Yapay zeka bot günde %3 kazanıyor" iddiası. Hiçbir bot stabil yüksek getiri üretemez. Bu tür araçlar genellikle para çalmak için kullanılıyor.', kirmizi:'Garanti AI getirisi'},
+];
+document.getElementById('fraud-grid').innerHTML = FRAUDS.map(f=>`
+  <div style="background:rgba(239,68,68,0.04);border:1px solid rgba(239,68,68,0.15);border-radius:12px;padding:1.1rem">
+    <div style="font-size:1.5rem;margin-bottom:0.5rem">${f.emoji}</div>
+    <div style="font-weight:800;font-size:0.9rem;margin-bottom:0.4rem">${f.title}</div>
+    <div style="color:var(--muted);font-size:0.8rem;line-height:1.5;margin-bottom:0.6rem">${f.desc}</div>
+    <div style="background:rgba(239,68,68,0.12);color:#fca5a5;font-size:0.7rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:4px;display:inline-block">🚩 ${f.kirmizi}</div>
+  </div>`).join('');
+
+// ─── KİRA vs ALMA ─────────────────────────────────────────────────────────────
+function calcKiraAlma() {
+  const fiyat = +document.getElementById('ka-fiyat').value;
+  const pesinatPct = +document.getElementById('ka-pesinat').value/100;
+  const faiz = +document.getElementById('ka-faiz').value/100/12;
+  const sure = +document.getElementById('ka-sure').value*12;
+  const kira = +document.getElementById('ka-kira').value;
+  const artis = +document.getElementById('ka-artis').value/100;
+  const getiri = +document.getElementById('ka-getiri').value/100;
+  const yil = +document.getElementById('ka-yil').value;
+
+  const pesinat = fiyat * pesinatPct;
+  const krediAna = fiyat - pesinat;
+  const aylikTaksit = krediAna * faiz / (1 - Math.pow(1+faiz,-sure));
+  const toplamKrediOdeme = aylikTaksit * sure;
+
+  let toplamKira = 0, aylikKira = kira;
+  for(let i=0;i<yil;i++){ toplamKira += aylikKira*12; aylikKira *= (1+artis); }
+
+  const pesinatGetiri = pesinat * (Math.pow(1+getiri, yil) - 1);
+
+  const toplamAlmaMaliyeti = pesinat + Math.min(toplamKrediOdeme, aylikTaksit*yil*12);
+  const toplamKiraAlt = toplamKira - pesinatGetiri;
+
+  const kazanan = toplamAlmaMaliyeti < toplamKiraAlt ? 'ALMA' : 'KİRA';
+  const renk = kazanan==='ALMA' ? 'var(--primary)' : 'var(--gold)';
+
+  document.getElementById('ka-verdict').innerHTML = `<span style="color:${renk};font-size:1.1rem">${kazanan==='ALMA'?'🏠 Ev ALMAK':'🏠 KİRADA KALMAK'} daha avantajlı görünüyor</span>`;
+  document.getElementById('ka-rows').innerHTML = [
+    {l:'Peşinat', v: '₺'+pesinat.toLocaleString('tr-TR')},
+    {l:'Aylık taksit', v: '₺'+Math.round(aylikTaksit).toLocaleString('tr-TR')},
+    {l:yil+' yılda toplam ödeme (alma)', v: '₺'+Math.round(toplamAlmaMaliyeti).toLocaleString('tr-TR')},
+    {l:yil+' yılda toplam kira', v: '₺'+Math.round(toplamKira).toLocaleString('tr-TR')},
+    {l:'Peşinatı yatırsaydın kazanırdın', v: '+₺'+Math.round(pesinatGetiri).toLocaleString('tr-TR')},
+    {l:'Net kira maliyeti (fırsatmaliyet sonrası)', v: '₺'+Math.round(toplamKiraAlt).toLocaleString('tr-TR')},
+  ].map(r=>`<div class="result-row"><span>${r.l}</span><span style="font-weight:700">${r.v}</span></div>`).join('');
+  document.getElementById('ka-result').style.display='block';
 }
 
 // INIT
